@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamyas - Gift Suggestions</title>
+  <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="imgs/logo.png" alt="Kamyas Logo" class="logo" onclick="openModal()">
+    <h1>Welcome to Kamyas</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a onclick="showSection('about-us')">About Us</a>
+    <a onclick="showSection('contact-us')">Contact Us</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+
+  <!-- Video of Opening Gift Box -->
+  <div class="video-container">
+    <video id="backgroundVideo" autoplay loop muted>
+      <button id="unmuteButton">Unmute</button>
+      <source src="video\the-magic-of-unwrapping-joy .mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- About Us -->
+  <section id="about-us" class="card">
+    <h2>About Us</h2>
+    <p>
+      At Kamyas, we specialize in curating the perfect gift ideas for every occasion. 
+      Whether it’s a birthday, anniversary, festival, or a simple way to show your love, 
+      we are here to make your moments memorable with unique and thoughtful gift suggestions.
+    </p>
+    <p>
+      Our platform is designed to understand your preferences and offer personalized 
+      recommendations to ensure your loved ones feel truly special.
+    </p>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact-us" class="card">
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> support@kamyas.com</p>
+    <p><strong>Phone:</strong> +91 12345 67890</p>
+    <p>Visit us at Kamyas Headquarters, 123 Gift Street, Jammu, India.</p>
+  </section>
+
+ 
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kamyas. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="#" class="social-icon">Facebook</a>
+      <a href="#" class="social-icon">Twitter</a>
+      <a href="#" class="social-icon">Instagram</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script\index.js"></script>
+</body>
+</html>

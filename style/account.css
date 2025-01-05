@@ -1,0 +1,201 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../imgs/backg.jpeg') no-repeat center center fixed; /* Full-page background */
+    background-size: cover;  
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Vertically center the logo and text */
+    justify-content: flex-start; /* Align items to the left */
+    margin-bottom: 10px; /* Reduce margin to decrease header size */
+    width: 100%; /* Full-width header */
+    padding: 10px 20px; /* Adjust header padding */
+    background: rgba(255, 255, 255, 0.7); /* Light background */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+header .logo img {
+    width: 100px; /* Reduce logo size */
+    height: auto;
+    margin-right: 300px; /* Space between logo and text */
+}
+
+h1 {
+    color: rgb(57, 186, 236);
+    font-size: 24px;
+    font-weight: 600;
+    justify-content: center;
+}
+h1:hover{
+    background-color: white;
+
+}
+
+/* Main Title */
+h2 {
+    font-size: 28px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background-color: transparent;
+    
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+h2:hover {
+    background-color: #4a48d2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    background-color:transparent;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-radius: 5px; /* Rounded corners for the navbar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Ensure navigation is centered */
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #d24899;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Form */
+form {
+    background:white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.4);
+}
+
+form button {
+    background: #6c63ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: #5848d2;
+    transform: scale(1.03);
+}
+
+form button:active {
+    transform: scale(0.98);
+}
+
+/* Logout Button */
+button[onclick="logout()"] {
+    background: #ff4b5c;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[onclick="logout()"]:hover {
+    background: #e04050;
+    transform: scale(1.03);
+}
+
+button[onclick="logout()"]:active {
+    transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    button[onclick="logout()"] {
+        width: 90%;
+    }
+}

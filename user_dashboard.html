@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamyas - Dashboard</title>
+    <link rel="stylesheet" href="style\user_dashbord.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="nav-left">
+                <!-- Logo -->
+                <img src="imgs\logo.png" alt="Kamyas Logo">
+                <!-- Navigation Links -->
+                <a href="index.html">Home</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="cart.html">Cart</a>
+                <a href="gift-suggestion.html">Gift Suggestion</a>
+            </div>
+            <div class="nav-right">
+                <a href="account.html">Account</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Welcome to Your Dashboard</h1>
+        
+        <!-- Filters and Sorting -->
+        <section class="filters">
+            <label for="category-filter">Category:</label>
+            <select id="category-filter">
+                <option value="">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="soft-toys">Soft Toys</option>
+                <option value="clothing">Clothing</option>
+                <option value="home-decor">Home Decor</option>
+                <option value="Accessories">Accessories</option>
+                <option value="personalized Gifts">personalized Gifts</option>
+                <option value="Food & Beverages">Food & Beverages</option>
+                <option value="Jewelry">Jewelry</option>
+                <option value="Makeup">Makeup</option>
+                <option value="Books">Books</option>
+
+            </select>
+
+            <label for="sort-filter">Sort by:</label>
+            <select id="sort-filter">
+                <option value="az">A-Z</option>
+                <option value="za">Z-A</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+            </select>
+        </section>
+
+        <!-- Product List -->
+        <section class="products" id="product-list">
+            <!-- Products will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <script src="script/user_dashboard.js"></script>
+</body>
+</html>

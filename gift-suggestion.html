@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Suggestion</title>
+  <link rel="stylesheet" href="style\gift_suggestion.css">
+  
+
+</head>
+<body>
+  <header>
+    
+    <div class="logo-container">
+      <img src="imgs/logo.png" alt="Kamyas Logo" width="60" height="60" />
+    </div>
+    <h1>Kamyas</h1>
+    </header>
+    <h2>Gift Suggestion Form</h2>
+  
+  <nav>
+   
+    <a href="user_dashboard.html">Home</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="cart.html">Cart</a>
+    <a href="account.html">Account</a>
+    <a href="gift-suggestion.html">gift-suggestion</a>
+    </nav>
+  
+  <!-- Gift Suggestion Form -->
+  <form id="gift-form">
+    <label for="occasion">Occasion: </label>
+    <select id="occasion" required>
+      <option value="">Select Occasion</option>
+      <option value="Birthday">Birthday</option>
+      <option value="Anniversary">Anniversary</option>
+      <option value="Wedding">Wedding</option>
+      <option value="Graduation">Graduation</option>
+      <option value="Festivals">Festivals</option>
+    </select><br>
+
+    <label for="preferences">Preferences: </label>
+    <select id="preferences" required>
+      <option value="">Select Preference</option>
+      <option value="electronics">Electronics</option>
+      <option value="soft-toys">Soft Toys</option>
+      <option value="clothing">Clothing</option>
+      <option value="home-decor">Home Decor</option>
+      <option value="Accessories">Accessories</option>
+      <option value="personalized Gifts">personalized Gifts</option>
+      <option value="Food & Beverages">Food & Beverages</option>
+      <option value="Jewelry">Jewelry</option>
+      <option value="Makeup">Makeup</option>
+      <option value="Books">Books</option>
+
+    </select><br>
+
+    <label for="gift-type">Gift Type: </label>
+    <select id="gift-type" required>
+      <option value="">Select Gift Type</option>
+      <option value="Personalized">Personalized</option>
+      <option value="Luxury">Luxury</option>
+      <option value="Eco-friendly">Eco-friendly</option>
+      <option value="Handmade">Handmade</option>
+      <option value="Unique">Unique</option>
+    </select><br>
+
+    <button type="submit">Get Suggestion</button>
+  </form>
+
+  <div id="suggestion"></div>
+
+  <script src="script\gift_suggestion.js"></script>
+  
+</body>
+</html>

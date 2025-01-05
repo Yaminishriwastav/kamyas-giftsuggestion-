@@ -1,0 +1,225 @@
+/* Resetting default margin and padding */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../imgs/backg.jpeg') no-repeat center center fixed; /* Full-page background */
+    background-size: cover; /* Ensures the background covers the entire page */
+    background-position: center center; /* Ensures the background is centered */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-color: #f9f9fc;
+    color: #333;
+    
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Adjusted for a more natural flow */
+    min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+}
+
+
+/* Header Styles */
+header {
+    width: 100%;
+    padding: 15px 0; /* Adjusted for better spacing */
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px; /* Adds spacing below the header */
+}
+
+/* Logo Container */
+header .logo-container {
+    position: absolute;
+    left: 20px;
+}
+
+header .logo-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Logo Text */
+header h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-left: 120px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header h1:hover {
+    color: #ff6f61;
+    background-color: rgba(255, 111, 97, 0.1);
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+/* Heading */
+h2 {
+    font-size: 30px;
+    color:blue;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+h2:hover {
+    color: #ff6f61;
+    background-color: rgba(255, 111, 97, 0.1);
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+/* Navigation Links */
+nav a {
+    color: blue;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 15px; /* Increased padding for better clickable area */
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+nav a:hover {
+    color: #ff6f61;
+    background-color: rgba(255, 111, 97, 0.1);
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* Form Styles */
+form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    width: 100%;
+    max-width: 550px; /* Slightly reduced for better balance */
+    margin: 30px auto; /* Adds space around the form */
+    text-align: center;
+}
+
+/* Form Labels */
+form label {
+    display: block;
+    margin-bottom: 1px; /* Increased space for clarity */
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Form Select Box */
+form select {
+    width: 100%;
+    padding: 12px; /* Increased padding for easier interaction */
+    margin-bottom: 18px; /* Increased space */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form select:focus {
+    border-color: #ff6f61;
+}
+
+/* Form Submit Button */
+form button {
+    display: block;
+    width: 100%;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 14px; /* Increased padding for better UX */
+    font-size: 18px; /* Slightly larger text */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #e65c50;
+    transform: translateY(-3px); /* Slightly larger hover effect */
+}
+
+form button:active {
+    transform: translateY(1px);
+}
+
+/* Suggestion Section */
+#suggestion {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px; /* Slightly wider suggestion box */
+    color: #444;
+    margin-bottom: 30px;
+}
+
+#suggestion h4 {
+    font-size: 25px; /* Slightly larger font */
+    color: #333;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#suggestion p {
+    margin: 12px 0;
+    font-size: 16px; /* Increased font size for readability */
+    color: #555;
+    line-height: 1.6; /* Increased line height for better readability */
+}
+
+#suggestion img {
+    margin: 12px 0;
+    width: 120px; /* Slightly larger image */
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    form,
+    #suggestion {
+        width: 95%;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    nav a {
+        padding: 6px 12px; /* Adjusted padding */
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    form label {
+        font-size: 16px; /* Increased font size for easier reading */
+    }
+
+    form button {
+        font-size: 16px; /* Adjusted font size for mobile */
+        padding: 12px; /* Adjusted padding */
+    }
+}
