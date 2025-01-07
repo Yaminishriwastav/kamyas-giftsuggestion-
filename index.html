@@ -4,9 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kamyas - Gift Suggestions</title>
-  <link rel="stylesheet" href="style/index.css">
+  <style>
+    /* Fullscreen Video Styling */
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Send behind other elements */
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Header and Content Styling to Overlay on Video */
+    header, nav, section, footer {
+      position: relative;
+      z-index: 1; /* Ensure above video */
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      padding: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 10px;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    section {
+      margin: 50px auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .play-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
 </head>
 <body>
+  <!-- Video Background -->
+  <div class="video-container">
+    <iframe 
+      id="backgroundVideo"
+      src="https://www.youtube.com/embed/-ZoSJNniqg8?autoplay=0&loop=1&playlist=-ZoSJNniqg8" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Play Button -->
+  <button id="playButton" class="play-button">Play with Sound</button>
+
   <!-- Header -->
   <header>
     <img src="imgs/logo.png" alt="Kamyas Logo" class="logo" onclick="openModal()">
@@ -21,17 +115,8 @@
     <a href="signup.html">Sign Up</a>
   </nav>
 
-  <!-- Video of Opening Gift Box -->
-  <div class="video-container">
-    <video id="backgroundVideo" autoplay loop muted>
-      <button id="unmuteButton">Unmute</button>
-      <source src="https://youtu.be/-ZoSJNniqg8">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
   <!-- About Us -->
-  <section id="about-us" class="card">
+  <section id="about-us">
     <h2>About Us</h2>
     <p>
       At Kamyas, we specialize in curating the perfect gift ideas for every occasion. 
@@ -45,14 +130,12 @@
   </section>
 
   <!-- Contact Us -->
-  <section id="contact-us" class="card">
+  <section id="contact-us">
     <h2>Contact Us</h2>
     <p><strong>Email:</strong> support@kamyas.com</p>
     <p><strong>Phone:</strong> +91 12345 67890</p>
     <p>Visit us at Kamyas Headquarters, 123 Gift Street, Jammu, India.</p>
   </section>
-
- 
 
   <!-- Footer -->
   <footer>
@@ -65,6 +148,15 @@
   </footer>
 
   <!-- JavaScript -->
-  <script src="script\index.js"></script>
+  <script>
+    const playButton = document.getElementById('playButton');
+    const videoIframe = document.getElementById('backgroundVideo');
+
+    playButton.addEventListener('click', () => {
+      // Change iframe src to enable autoplay with sound
+      videoIframe.src = "https://www.youtube.com/embed/-ZoSJNniqg8?autoplay=1&loop=1&playlist=-ZoSJNniqg8";
+      playButton.style.display = 'none'; // Hide the button after clicking
+    });
+  </script>
 </body>
 </html>
