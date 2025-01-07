@@ -1,213 +1,189 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-    /* General Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      background-color: #f8f9fa;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      justify-content: space-between; /* Ensures content doesn't overlap with the footer */
-    }
+/* Header Styles */
+header {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
 
-    /* Header Styles */
-    header {
-      background-color: #3f8c49;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      color: white;
-    }
+header .logo {
+  width: 60px;
+  height: 80px;
+  margin-right: 20px;
+  cursor: pointer;
+}
 
-    header .logo {
-      width: 60px;
-      height: 60px;
-      margin-right: 20px;
-      cursor: pointer;
-    }
+header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+header h1:hover{
+  background: rgba(255, 255, 255, 0.2);
+  
+}
+/* Navigation Bar */
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    header h1 {
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin: 0;
-      flex: 1;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
-    /* Navigation Bar */
-    nav {
-      background-color: #2e7033;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+nav a:hover,
+nav a:focus {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-      margin: 0 15px;
-      cursor: pointer;
-    }
+/* Section Content Styles */
+.section-content {
+  position: absolute; /* Absolute position for center alignment */
+  top: 50%; /* Vertically center */
+  left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%); /* Adjusts the element to exactly center */
+  z-index: 1; /* Ensures it's above the background video */
+  display: none; /* Initially hidden */
+  padding: 15px; /* Reduced padding for compactness */
+  margin: 10px auto;
+  max-width: 500px; /* Reduced maximum width */
+  background-color: (25, 163, 152, 0.8); /* Fixed background color with rgba */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for the section */
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+.section-content h2 {
+  background: rgba(104, 20, 238, 0.5); /* Semi-transparent background */
+  padding: 5px; /* Reduced padding for heading */
+  color: white; /* Text color for heading */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the heading */
+  font-size: 1.5rem; /* Smaller font size for heading */
+}
 
-    /* Card Section Styles */
-    .card {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 700px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      display: none; /* Hidden by default */
-    }
+.section-content p {
+  color:white; /* Text color for paragraphs */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow to make text stand out */
+  font-size: 1.2rem; /* Smaller font size for paragraphs */
+  line-height: 1.4;
+}
 
-    .card.active {
-      display: block; /* Show when active */
-    }
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: auto; /* Pushes footer to the bottom of the page */
+}
 
-    .card h2 {
-      font-size: 1.5rem;
-      color: #3f8c49;
-      margin-bottom: 10px;
-    }
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    .card p {
-      line-height: 1.6;
-    }
+footer p {
+  font-size: 18px;
+  margin: 0 0 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards;
+}
 
-    /* Footer */
-    footer {
-      background: #333;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      animation: slideUp 1s ease-out;
-      margin-top: auto; /* Pushes footer to the bottom of the page */
-    }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeIn 2s 1.5s forwards;
+}
 
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+.social-icon {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
 
-    footer p {
-      font-size: 18px;
-      margin: 0 0 20px;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      opacity: 0;
-      animation: fadeIn 2s 1s forwards;
-    }
+.social-icon:hover {
+  background-color: #57C79B;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      opacity: 0;
-      animation: fadeIn 2s 1.5s forwards;
-    }
-
-    .social-icon {
-      text-decoration: none;
-      font-size: 20px;
-      color: white;
-      font-weight: 600;
-      padding: 10px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-    }
-
-    .social-icon:hover {
-      background-color: #57C79B;
-      color: white;
-      transform: translateY(-5px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    @keyframes slideUp {
-      0% {
-        transform: translateY(100px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    /* Video Styles */
+/* Fullscreen Video Styling */
 .video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Full screen height */
-    z-index: -1; /* Sends the video to the background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send behind other elements */
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animations */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
   }
-  
-  video {
-    object-fit: cover; /* Ensures the video covers the entire screen */
-    width: 100%;
-    height: 100%;
-    border-radius: 0; /* Optional: removes any border-radius */
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
+}
 
-    /* Modal Styles */
-    .modal {
-      display: none; /* Hidden by default */
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.7);
-    }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-    .modal-content {
-      margin: 15% auto;
-      display: block;
-      max-width: 300px;
-      border-radius: 10px;
-    }
-
-    #caption {
-      text-align: center;
-      color: white;
-      font-size: 1rem;
-      padding: 10px;
-    }
-
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 25px;
-      color: white;
-      font-size: 30px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #ccc;
-      text-decoration: none;
-    }
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-content {
+    padding: 15px;
+  }
+}
