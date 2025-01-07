@@ -1,23 +1,13 @@
-const video = document.getElementById('backgroundVideo');
-const unmuteButton = document.getElementById('unmuteButton');
 
-// Check if the video is muted due to autoplay restrictions
-window.addEventListener('load', () => {
-  video.muted = false; // Attempt to play with audio
+    const playButton = document.getElementById('playButton');
+    const videoIframe = document.getElementById('backgroundVideo');
 
-  video.play().catch(() => {
-    // If autoplay with sound is blocked, show the unmute button
-    video.muted = true;
-    unmuteButton.style.display = 'block';
-  });
-});
+    playButton.addEventListener('click', () => {
+      // Change iframe src to enable autoplay with sound
+      videoIframe.src = "https://www.youtube.com/embed/-ZoSJNniqg8?autoplay=1&loop=1&playlist=-ZoSJNniqg8";
+      playButton.style.display = 'none'; // Hide the button after clicking
+    });
 
-// Unmute and play the video when the button is clicked
-unmuteButton.addEventListener('click', () => {
-  video.muted = false;
-  video.play();
-  unmuteButton.style.display = 'none'; // Hide the button after unmuting
-});
 
 // Function to show the selected section
 function showSection(sectionId) {
