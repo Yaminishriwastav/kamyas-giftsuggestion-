@@ -7,6 +7,20 @@
   <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
+  <!-- Video Background -->
+  <div class="video-container">
+    <iframe 
+      id="backgroundVideo"
+      src="https://www.youtube.com/embed/-ZoSJNniqg8?autoplay=0&loop=1&playlist=-ZoSJNniqg8" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Play Button -->
+  <button id="playButton" class="play-button">Play with Sound</button>
+
   <!-- Header -->
   <header>
     <img src="imgs/logo.png" alt="Kamyas Logo" class="logo" onclick="openModal()">
@@ -16,22 +30,13 @@
   <!-- Navigation -->
   <nav>
     <a onclick="showSection('about-us')">About Us</a>
-    <a onclick="showSection('contact-us')">Contact Us</a>
+    <a onclick="showSection('contact-us')">contact us</a>
     <a href="login.html">Login</a>
     <a href="signup.html">Sign Up</a>
   </nav>
 
-  <!-- Video of Opening Gift Box -->
-  <div class="video-container">
-    <video id="backgroundVideo" autoplay loop muted>
-      <button id="unmuteButton">Unmute</button>
-      <source src="video\the-magic-of-unwrapping-joy .mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <!-- About Us -->
-  <section id="about-us" class="card">
+  <!-- About Us Section -->
+  <section id="about-us" class="section-content">
     <h2>About Us</h2>
     <p>
       At Kamyas, we specialize in curating the perfect gift ideas for every occasion. 
@@ -44,15 +49,13 @@
     </p>
   </section>
 
-  <!-- Contact Us -->
-  <section id="contact-us" class="card">
+  <!-- Contact Us Section -->
+  <section id="contact-us" class="section-content">
     <h2>Contact Us</h2>
     <p><strong>Email:</strong> support@kamyas.com</p>
     <p><strong>Phone:</strong> +91 12345 67890</p>
     <p>Visit us at Kamyas Headquarters, 123 Gift Street, Jammu, India.</p>
   </section>
-
- 
 
   <!-- Footer -->
   <footer>
