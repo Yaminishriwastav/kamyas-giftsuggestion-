@@ -1,4 +1,4 @@
-/* Resetting default margin and padding */ 
+/* Resetting default margin and padding */
 * {
     margin: 0;
     padding: 0;
@@ -8,218 +8,204 @@
 /* Body */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('../imgs/backg.jpeg') no-repeat center center fixed; /* Full-page background */
-    background-size: cover; /* Ensures the background covers the entire page */
-    background-position: center center; /* Ensures the background is centered */
-    background-attachment: fixed; /* Keeps the background fixed when scrolling */
-    background-color: #f9f9fc;
+    background: url('../imgs/back.jpg') no-repeat center center fixed; /* Full-page background */
+    background-size: cover;
+    background-color: #f0f4f8; /* Soft grayish-blue */
     color: #333;
-    
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Adjusted for a more natural flow */
-    min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+    min-height: 100vh;
 }
 
-
-/* Header Styles */
+/* Header */
 header {
-    width: 100%;
-    padding: 15px 0; /* Adjusted for better spacing */
-    background-color: transparent;
+    background-color: #004d40; /* Deep teal */
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 20px; /* Adds spacing below the header */
-}
-
-/* Logo Container */
-header .logo-container {
-    position: absolute;
-    left: 20px;
 }
 
 header .logo-container img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%; /* Circular logo */
+    border: 2px solid #ffe082; /* Light yellow border */
 }
 
-/* Logo Text */
 header h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 28px;
-    color: white;
-    margin-left: 120px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-header h1:hover {
-    color: #ff6f61;
-    background-color: rgba(255, 111, 97, 0.1);
-    transform: scale(1.05); /* Slightly enlarges on hover */
-}
-/* Heading */
-h2 {
-    font-size: 30px;
-    color:blue;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 22px;
+    margin: 0;
+    color: #ffe082; /* Light yellow */
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
-h2:hover {
-    color: #ff6f61;
-    background-color: rgba(255, 111, 97, 0.1);
-    transform: scale(1.05); /* Slightly enlarges on hover */
+
+/* Navigation Bar */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #004d40; /* Deep teal */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
-/* Navigation Links */
+
 nav a {
-    color: blue;
+    color: #ffe082; /* Light yellow */
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 8px 15px; /* Increased padding for better clickable area */
+    padding: 8px 15px;
     border-radius: 5px;
-    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ff6f61;
-    background-color: rgba(255, 111, 97, 0.1);
-    transform: scale(1.05); /* Slightly enlarges on hover */
+    color: #004d40; /* Deep teal */
+    background-color: #ffd54f; /* Golden yellow */
 }
 
-/* Form Styles */
-form {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 50px;
+nav a.active {
+    background-color: #ffe082; /* Highlight active page */
+    color: #004d40;
+}
+
+/* Gift Suggestion Form */
+#gift-form {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
-    width: 100%;
-    max-width: 550px; /* Slightly reduced for better balance */
-    margin: 30px auto; /* Adds space around the form */
-    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Labels */
-form label {
-    display: block;
-    margin-bottom: 1px; /* Increased space for clarity */
-    font-weight: bold;
+#gift-form label {
     font-size: 16px;
+    color: #004d40; /* Deep teal */
+}
+
+#gift-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #80cbc4; /* Muted teal */
+    border-radius: 5px;
+}
+
+#gift-form button {
+    background-color: #ff6f61; /* Coral */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#gift-form button:hover {
+    background-color: #e65c50; /* Slightly darker coral */
+}
+
+/* Suggestion Cards Section */
+#suggestion {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+#suggestion .card {
+    background-color: #ffffff; /* White */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#suggestion .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#suggestion .card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #80cbc4; /* Muted teal border */
+}
+
+#suggestion .card h3 {
+    font-size: 18px;
+    color: #004d40; /* Deep teal */
+}
+
+#suggestion .card p {
+    font-size: 14px;
     color: #555;
 }
 
-/* Form Select Box */
-form select {
-    width: 100%;
-    padding: 12px; /* Increased padding for easier interaction */
-    margin-bottom: 18px; /* Increased space */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #fff;
-    color: #333;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-form select:focus {
-    border-color: #ff6f61;
-}
-
-/* Form Submit Button */
-form button {
-    display: block;
-    width: 100%;
-    background-color: #ff6f61;
+#suggestion .card button {
+    background-color: #ff6f61; /* Coral */
     color: white;
+    padding: 10px 15px;
+    font-size: 14px;
     border: none;
-    padding: 14px; /* Increased padding for better UX */
-    font-size: 18px; /* Slightly larger text */
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-form button:hover {
-    background-color: #e65c50;
-    transform: translateY(-3px); /* Slightly larger hover effect */
-}
-
-form button:active {
-    transform: translateY(1px);
-}
-
-/* Suggestion Section */
-#suggestion {
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 650px; /* Slightly wider suggestion box */
-    color: #444;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
-#suggestion h4 {
-    font-size: 25px; /* Slightly larger font */
-    color: #333;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+#suggestion .card button:hover {
+    background-color: #e65c50; /* Slightly darker coral */
 }
 
-#suggestion p {
-    margin: 12px 0;
-    font-size: 16px; /* Increased font size for readability */
-    color: #555;
-    line-height: 1.6; /* Increased line height for better readability */
-}
-
-#suggestion img {
-    margin: 12px 0;
-    width: 120px; /* Slightly larger image */
-    height: auto;
-    display: block;
-    border-radius: 5px;
+/* Footer */
+#footer {
+    margin-top: auto;
+    background-color: #004d40; /* Deep teal */
+    color: #ffe082; /* Light yellow */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        padding: 15px;
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 18px;
     }
 
-    form,
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
     #suggestion {
-        width: 95%;
-    }
-
-    h2 {
-        font-size: 26px;
-    }
-
-    nav a {
-        padding: 6px 12px; /* Adjusted padding */
-        font-size: 14px; /* Smaller font size for mobile */
-    }
-
-    form label {
-        font-size: 16px; /* Increased font size for easier reading */
-    }
-
-    form button {
-        font-size: 16px; /* Adjusted font size for mobile */
-        padding: 12px; /* Adjusted padding */
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }

@@ -4,29 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gift Suggestion</title>
-  <link rel="stylesheet" href="style\gift_suggestion.css">
-  
-
+  <link rel="stylesheet" href="style/gift_suggestion.css">
 </head>
 <body>
   <header>
-    
     <div class="logo-container">
       <img src="imgs/logo.png" alt="Kamyas Logo" width="60" height="60" />
     </div>
     <h1>Kamyas</h1>
-    </header>
-    <h2>Gift Suggestion Form</h2>
+  </header>
+  
+  
   
   <nav>
-   
     <a href="user_dashboard.html">Home</a>
     <a href="wishlist.html">Wishlist</a>
     <a href="cart.html">Cart</a>
     <a href="account.html">Account</a>
-    <a href="gift-suggestion.html">gift-suggestion</a>
-    </nav>
-  
+    <a href="gift-suggestion.html" class="active">Gift Suggestion</a>
+  </nav>
+  <h2>Gift Suggestion Form</h2>
   <!-- Gift Suggestion Form -->
   <form id="gift-form">
     <label for="occasion">Occasion: </label>
@@ -46,13 +43,12 @@
       <option value="soft-toys">Soft Toys</option>
       <option value="clothing">Clothing</option>
       <option value="home-decor">Home Decor</option>
-      <option value="Accessories">Accessories</option>
-      <option value="personalized Gifts">personalized Gifts</option>
-      <option value="Food & Beverages">Food & Beverages</option>
-      <option value="Jewelry">Jewelry</option>
-      <option value="Makeup">Makeup</option>
-      <option value="Books">Books</option>
-
+      <option value="accessories">Accessories</option>
+      <option value="personalized Gifts">Personalized Gifts</option>
+      <option value="food-beverages">Food & Beverages</option>
+      <option value="jewelry">Jewelry</option>
+      <option value="makeup">Makeup</option>
+      <option value="books">Books</option>
     </select><br>
 
     <label for="gift-type">Gift Type: </label>
@@ -68,9 +64,9 @@
     <button type="submit">Get Suggestion</button>
   </form>
 
-  <div id="suggestion"></div>
+  <!-- Suggestion Cards Section -->
+  <section id="suggestion"></section>
 
-  <script src="script\gift_suggestion.js"></script>
-  
+  <script src="script/gift_suggestion.js"></script>
 </body>
 </html>
